@@ -1,3 +1,4 @@
+import 'package:app_ui/third.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart';
@@ -85,7 +86,7 @@ class _SecondPageState extends State<SecondPage> {
               ),
             ),
             Container(
-              height: 180,
+              height: 200,
               width: 345,
               color: const Color.fromARGB(255, 255, 255, 255),
               child: Column(
@@ -97,7 +98,8 @@ class _SecondPageState extends State<SecondPage> {
                         padding: EdgeInsets.all(8.0),
                         decoration: BoxDecoration(
                           border: Border.all(
-                            color: const Color.fromARGB(119, 0, 0, 0), // Border color
+                            color: const Color.fromARGB(
+                                119, 0, 0, 0), // Border color
                             width: 2.0, // Border width
                           ),
                           borderRadius: BorderRadius.circular(12.0),
@@ -112,12 +114,14 @@ class _SecondPageState extends State<SecondPage> {
                           selectorConfig: const SelectorConfig(
                             selectorType: PhoneInputSelectorType.BOTTOM_SHEET,
                           ),
-                          inputDecoration: InputDecoration(border: InputBorder.none,),
+                          inputDecoration: const InputDecoration(
+                            border: InputBorder.none,
+                          ),
                           // inputBorder: const OutlineInputBorder(
                           //     borderSide: BorderSide(
                           //         color: Color.fromRGBO(255, 255, 255, 0.3))),
                           ignoreBlank: false,
-                          autoValidateMode: AutovalidateMode.onUserInteraction,
+                          autoValidateMode: AutovalidateMode.disabled,
                           selectorTextStyle:
                               const TextStyle(color: Colors.black),
                           initialValue: PhoneNumber(isoCode: 'NG'),
@@ -127,7 +131,33 @@ class _SecondPageState extends State<SecondPage> {
                       ),
                     ),
                   ),
-                  // const ContinueButton()
+                  SizedBox(
+                    height: 60,
+                    width: 370,
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(20, 5, 20, 5),
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) =>  const ThirdPage()));
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor:
+                              const Color.fromRGBO(160, 32, 240, 1),
+                        ),
+                        child: const Text(
+                          "Continue",
+                          style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold,
+                              fontFamily: 'Nunito',
+                              letterSpacing: 5,
+                              color: Color.fromARGB(255, 255, 255, 255)),
+                        ),
+                      ),
+                    ),
+                  ),
                 ],
               ),
             )
