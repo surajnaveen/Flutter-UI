@@ -4,7 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 //import 'package:timer_count_down/timer_controller.dart';
 // ignore: depend_on_referenced_packages
 import 'package:timer_count_down/timer_count_down.dart';
-//import 'package:flutter/services.dart';
+import 'package:app_ui/fourth.dart';
 
 class ThirdPage extends StatefulWidget {
   const ThirdPage({super.key});
@@ -31,7 +31,7 @@ class _ThirdPageState extends State<ThirdPage> {
                       color: Color.fromRGBO(160, 32, 240, 0.6),
                       decoration: TextDecoration.none)),
               TextSpan(
-                  text: '1',
+                  text: '2',
                   style: TextStyle(
                       fontFamily: 'Nunito',
                       color: Color.fromRGBO(160, 32, 240, 0.6),
@@ -154,7 +154,7 @@ class _ThirdPageState extends State<ThirdPage> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const ThirdPage()));
+                                  builder: (context) => const Fourthpage()));
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor:
