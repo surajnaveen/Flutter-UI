@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 //import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:app_ui/fourth.dart';
+//import 'package:app_ui/sixth.dart';
 
 class FifthPage extends StatefulWidget {
   const FifthPage({super.key});
@@ -113,12 +113,32 @@ class _FifthPageState extends State<FifthPage> {
                                 fontSize: 17,
                                 fontWeight: FontWeight.w900,
                                 color: Color.fromARGB(255, 0, 0, 0)),
-                          )
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(21, 0, 0, 0),
+                            child: Container(
+                              padding: const EdgeInsets.symmetric(
+                                  vertical: 4, horizontal: 6),
+                              decoration: const BoxDecoration(
+                                  color: Color.fromRGBO(160, 32, 240, 0.701),
+                                  borderRadius: BorderRadius.only(
+                                    topLeft: Radius.circular(8),
+                                    bottomLeft: Radius.circular(8),
+                                  ) // green shaped
+                                  ),
+                              child: const Text(
+                                "Recommended",
+                                style: TextStyle(
+                                    fontFamily: 'Nunito',
+                                    color: Color.fromARGB(220, 255, 255, 255)),
+                              ),
+                            ),
+                          ),
                         ],
                       ),
                       const Padding(
-                        padding:  EdgeInsets.fromLTRB(40, 0, 10, 0),
-                        child:  Text(
+                        padding: EdgeInsets.fromLTRB(40, 0, 10, 0),
+                        child: Text(
                           "You can only share sample text sample text sample text",
                           style: TextStyle(
                               fontFamily: 'Nunito',
@@ -171,8 +191,8 @@ class _FifthPageState extends State<FifthPage> {
                         ],
                       ),
                       const Padding(
-                        padding:  EdgeInsets.fromLTRB(40, 0, 10, 0),
-                        child:  Text(
+                        padding: EdgeInsets.fromLTRB(40, 0, 10, 0),
+                        child: Text(
                           "You can only share sample text sample text sample text",
                           style: TextStyle(
                               fontFamily: 'Nunito',
@@ -192,10 +212,10 @@ class _FifthPageState extends State<FifthPage> {
                 padding: const EdgeInsets.fromLTRB(30, 5, 20, 5),
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const Fourthpage()));
+                    showDialog(
+                      context: context,
+                      builder: (BuildContext context) => PopUpBox(),
+                    );
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color.fromRGBO(160, 32, 240, 1),
@@ -207,6 +227,92 @@ class _FifthPageState extends State<FifthPage> {
                         fontWeight: FontWeight.bold,
                         fontFamily: 'Nunito',
                         letterSpacing: 5,
+                        color: Color.fromARGB(255, 255, 255, 255)),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class PopUpBox extends StatelessWidget {
+  const PopUpBox({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return AlertDialog(
+      content: Container(
+        height: MediaQuery.of(context).size.height * 0.5, 
+        child: Column(
+          children: [
+            SvgPicture.asset(
+              "asset/Fingerprint-rafiki.svg",
+              width: 220,
+              height: 220,
+            ),
+            const Padding(
+              padding: EdgeInsets.fromLTRB(15, 5, 15, 10),
+              child: Text(
+                "Congratulation",
+                style: TextStyle(
+                  fontFamily: 'Nunito',
+                  fontSize: 14,
+                  color: Color.fromARGB(120, 0, 0, 0),
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.all(5.0),
+              child: Text(
+                "Now you are registered",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                  fontFamily: 'Nunito',
+                ),
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.fromLTRB(15, 5, 15, 10),
+              child: Text(
+                "It is a long established fact",
+                style: TextStyle(
+                  fontFamily: 'Nunito',
+                  fontSize: 16,
+                  color: Color.fromARGB(90, 0, 0, 0),
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(15, 5, 15, 5),
+              child: SizedBox(
+                height: 55,
+                width: 300,
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const FifthPage()));
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color.fromRGBO(160, 32, 240, 1),
+                  ),
+                  child: const Text(
+                    "Continue",
+                    style: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'Nunito',
+                        letterSpacing: 8,
                         color: Color.fromARGB(255, 255, 255, 255)),
                   ),
                 ),
