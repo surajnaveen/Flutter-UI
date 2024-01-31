@@ -23,6 +23,12 @@ class __FourthpagStateState extends State<Fourthpage> {
       backgroundColor: const Color.fromARGB(255, 250, 240, 255),
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 250, 240, 255),
+        leading: GestureDetector(
+          child: const Icon( Icons.arrow_back_ios, color: Colors.black,  ),
+          onTap: () {
+            Navigator.pop(context);
+          } ,
+        ) ,
         title: RichText(
             text: TextSpan(
                 style: DefaultTextStyle.of(context).style,
@@ -67,7 +73,7 @@ class __FourthpagStateState extends State<Fourthpage> {
                 const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Text(
-                    "Registration",
+                    "Fingerprint",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 24,
@@ -78,7 +84,7 @@ class __FourthpagStateState extends State<Fourthpage> {
                 const Padding(
                   padding: EdgeInsets.fromLTRB(25, 10, 25, 20),
                   child: Text(
-                    "It is a long established fact that a reader will be distracted ",
+                    "To add your fingerprint, lift and set your finger at home button reperatedly",
                     style: TextStyle(
                       fontFamily: 'Nunito',
                       fontSize: 16,
@@ -102,7 +108,7 @@ class __FourthpagStateState extends State<Fourthpage> {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => const FifthPage()));
               },
-              child: const Text('Skip this step ->',style: TextStyle(
+              child: const Text('Skip this step >',style: TextStyle(
                 fontWeight: FontWeight.w900,
                 fontSize: 14
               ),),

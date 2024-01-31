@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-//import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-//import 'package:app_ui/sixth.dart';
 
 class FifthPage extends StatefulWidget {
   const FifthPage({super.key});
@@ -16,6 +14,13 @@ class _FifthPageState extends State<FifthPage> {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 250, 240, 255),
       appBar: AppBar(
+        backgroundColor: const Color.fromARGB(255, 250, 240, 255),
+        leading: GestureDetector(
+          child: const Icon( Icons.arrow_back_ios, color: Colors.black,  ),
+          onTap: () {
+            Navigator.pop(context);
+          } ,
+        ) ,
         title: RichText(
             text: TextSpan(
                 style: DefaultTextStyle.of(context).style,
@@ -57,10 +62,10 @@ class _FifthPageState extends State<FifthPage> {
             const Padding(
               padding: EdgeInsets.all(8.0),
               child: Text(
-                "Registration",
+                "One step away to your account",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 24,
+                  fontSize: 21,
                   fontFamily: 'Nunito',
                 ),
               ),
@@ -68,7 +73,7 @@ class _FifthPageState extends State<FifthPage> {
             const Padding(
               padding: EdgeInsets.fromLTRB(25, 10, 25, 20),
               child: Text(
-                "It is a long established fact that a reader will be distracted ",
+                "Now we need to veryfiy your identy",
                 style: TextStyle(
                   fontFamily: 'Nunito',
                   fontSize: 16,
@@ -139,7 +144,7 @@ class _FifthPageState extends State<FifthPage> {
                       const Padding(
                         padding: EdgeInsets.fromLTRB(40, 0, 10, 0),
                         child: Text(
-                          "You can only share sample text sample text sample text",
+                          "Get the full feature of your IndoAliz you can store up to IDR 10",
                           style: TextStyle(
                               fontFamily: 'Nunito',
                               fontSize: 14,
@@ -193,7 +198,7 @@ class _FifthPageState extends State<FifthPage> {
                       const Padding(
                         padding: EdgeInsets.fromLTRB(40, 0, 10, 0),
                         child: Text(
-                          "You can only share sample text sample text sample text",
+                          "You only can store IDR 1 Milion to 10 your IndoAliz wallert",
                           style: TextStyle(
                               fontFamily: 'Nunito',
                               fontSize: 14,
@@ -214,7 +219,7 @@ class _FifthPageState extends State<FifthPage> {
                   onPressed: () {
                     showDialog(
                       context: context,
-                      builder: (BuildContext context) => PopUpBox(),
+                      builder: (BuildContext context) => const PopUpBox(),
                     );
                   },
                   style: ElevatedButton.styleFrom(
@@ -252,9 +257,9 @@ class PopUpBox extends StatelessWidget {
         child: Column(
           children: [
             SvgPicture.asset(
-              "asset/Fingerprint-rafiki.svg",
-              width: 220,
-              height: 220,
+              "asset/undraw_done_re_oak4.svg",
+              width: 200,
+              height: 200,
             ),
             const Padding(
               padding: EdgeInsets.fromLTRB(15, 5, 15, 10),
@@ -263,7 +268,7 @@ class PopUpBox extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: 'Nunito',
                   fontSize: 14,
-                  color: Color.fromARGB(120, 0, 0, 0),
+                  color: Color.fromARGB(163, 0, 0, 0),
                 ),
                 textAlign: TextAlign.center,
               ),
@@ -282,11 +287,11 @@ class PopUpBox extends StatelessWidget {
             const Padding(
               padding: EdgeInsets.fromLTRB(15, 5, 15, 10),
               child: Text(
-                "It is a long established fact",
+                "Get start with idndoAlliz Wallet",
                 style: TextStyle(
                   fontFamily: 'Nunito',
                   fontSize: 16,
-                  color: Color.fromARGB(90, 0, 0, 0),
+                  color: Color.fromARGB(138, 0, 0, 0),
                 ),
                 textAlign: TextAlign.center,
               ),
@@ -307,7 +312,7 @@ class PopUpBox extends StatelessWidget {
                     backgroundColor: const Color.fromRGBO(160, 32, 240, 1),
                   ),
                   child: const Text(
-                    "Continue",
+                    "Start Now",
                     style: TextStyle(
                         fontSize: 15,
                         fontWeight: FontWeight.bold,

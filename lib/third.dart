@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-//import 'package:timer_count_down/timer_controller.dart';
 // ignore: depend_on_referenced_packages
 import 'package:timer_count_down/timer_count_down.dart';
 import 'package:app_ui/fourth.dart';
@@ -19,6 +18,13 @@ class _ThirdPageState extends State<ThirdPage> {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 250, 240, 255),
       appBar: AppBar(
+        backgroundColor: const Color.fromARGB(255, 250, 240, 255),
+        leading: GestureDetector(
+          child: const Icon( Icons.arrow_back_ios, color: Colors.black,  ),
+          onTap: () {
+            Navigator.pop(context);
+          } ,
+        ) ,
         title: RichText(
             text: TextSpan(
                 style: DefaultTextStyle.of(context).style,
@@ -53,14 +59,14 @@ class _ThirdPageState extends State<ThirdPage> {
         child: Column(
           children: [
             SvgPicture.asset(
-              "asset/Profile data-rafiki.svg",
+              "asset/Verified-amico.svg",
               width: 250,
               height: 250,
             ),
             const Padding(
               padding: EdgeInsets.all(8.0),
               child: Text(
-                "Registration",
+                "Veryfication",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 24,
@@ -71,7 +77,7 @@ class _ThirdPageState extends State<ThirdPage> {
             const Padding(
               padding: EdgeInsets.fromLTRB(25, 10, 25, 20),
               child: Text(
-                "It is a long established fact that a reader will be distracted ",
+                "Enter 4 digit number that sent to your number",
                 style: TextStyle(
                   fontFamily: 'Nunito',
                   fontSize: 16,

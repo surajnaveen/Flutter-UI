@@ -2,7 +2,6 @@ import 'package:app_ui/third.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart';
-//import 'package:app_ui/button.dart';
 
 class SecondPage extends StatefulWidget {
   const SecondPage({super.key});
@@ -24,6 +23,12 @@ class _SecondPageState extends State<SecondPage> {
       backgroundColor: const Color.fromARGB(255, 250, 240, 255),
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 250, 240, 255),
+        leading: GestureDetector(
+          child: const Icon( Icons.arrow_back_ios, color: Colors.black,  ),
+          onTap: () {
+            Navigator.pop(context);
+          } ,
+        ) ,
         title: RichText(
             text: TextSpan(
                 style: DefaultTextStyle.of(context).style,
@@ -58,7 +63,7 @@ class _SecondPageState extends State<SecondPage> {
         child: Column(
           children: [
             SvgPicture.asset(
-              "asset/Profile data-rafiki.svg",
+              "asset/Forms-amico.svg",
               width: 250,
               height: 250,
             ),

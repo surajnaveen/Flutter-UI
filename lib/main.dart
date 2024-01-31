@@ -3,9 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-// void main() {
-//   runApp(const MyApp());
-// }
 
 void main() => runApp(
       DevicePreview(
@@ -52,7 +49,7 @@ class MyApp extends StatelessWidget {
                       const Padding(
                         padding: EdgeInsets.fromLTRB(25, 10, 25, 20),
                         child: Text(
-                          "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout",
+                          "Never a better time than now to start thinking about how you manage all your Finance with phone",
                           style: TextStyle(
                             fontFamily: 'Nunito',
                             fontSize: 16,
