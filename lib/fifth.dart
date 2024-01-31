@@ -81,7 +81,7 @@ class _FifthPageState extends State<FifthPage> {
               padding: const EdgeInsets.fromLTRB(0, 0, 0, 20),
               child: Container(
                 height: 100,
-                width: 345,
+                width: 335,
                 color: const Color.fromARGB(255, 255, 255, 255),
                 child: Padding(
                   padding: const EdgeInsets.all(12.0),
@@ -97,25 +97,35 @@ class _FifthPageState extends State<FifthPage> {
                               width: 30.0,
                               color: const Color.fromARGB(255, 26, 255, 0),
                               child: const Center(
-                                child: Text("1",
+                                child: Text(
+                                  "1",
                                   style: TextStyle(
-                                    color: Color.fromARGB(252, 255, 252, 252),
-                                    fontSize: 20
-                                  ),
+                                      color: Color.fromARGB(252, 255, 252, 252),
+                                      fontSize: 20),
                                 ),
                               ),
                             ),
                           ),
-                          const Text(" Use Identity Card",
+                          const Text(
+                            "   Use Identity Card",
                             style: TextStyle(
-                              fontFamily: "Nunito",
-                              fontSize: 17,
-                              fontWeight: FontWeight.w900,
-                              color: Color.fromARGB(255, 0, 0, 0)
-                            ),
+                                fontFamily: "Nunito",
+                                fontSize: 17,
+                                fontWeight: FontWeight.w900,
+                                color: Color.fromARGB(255, 0, 0, 0)),
                           )
                         ],
                       ),
+                      const Padding(
+                        padding:  EdgeInsets.fromLTRB(40, 0, 10, 0),
+                        child:  Text(
+                          "You can only share sample text sample text sample text",
+                          style: TextStyle(
+                              fontFamily: 'Nunito',
+                              fontSize: 14,
+                              color: Color.fromARGB(165, 0, 0, 0)),
+                        ),
+                      )
                     ],
                   ),
                 ),
@@ -125,12 +135,9 @@ class _FifthPageState extends State<FifthPage> {
               padding: const EdgeInsets.fromLTRB(0, 0, 0, 20),
               child: Container(
                 height: 100,
-                width: 345,
+                width: 335,
                 color: const Color.fromARGB(255, 255, 255, 255),
-                child: Column(
-                  //mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Padding(
+                child: Padding(
                   padding: const EdgeInsets.all(12.0),
                   child: Column(
                     children: [
@@ -144,29 +151,37 @@ class _FifthPageState extends State<FifthPage> {
                               width: 30.0,
                               color: const Color.fromARGB(255, 26, 255, 0),
                               child: const Center(
-                                child: Text("1",
+                                child: Text(
+                                  "2",
                                   style: TextStyle(
-                                    color: Color.fromARGB(252, 255, 252, 252),
-                                    fontSize: 20
-                                  ),
+                                      color: Color.fromARGB(252, 255, 252, 252),
+                                      fontSize: 20),
                                 ),
                               ),
                             ),
                           ),
-                          const Text(" Use Identity Card",
+                          const Text(
+                            "   Without Identity Card",
                             style: TextStyle(
-                              fontFamily: "Nunito",
-                              fontSize: 17,
-                              fontWeight: FontWeight.w900,
-                              color: Color.fromARGB(255, 0, 0, 0)
-                            ),
+                                fontFamily: "Nunito",
+                                fontSize: 17,
+                                fontWeight: FontWeight.w900,
+                                color: Color.fromARGB(255, 0, 0, 0)),
                           )
                         ],
                       ),
+                      const Padding(
+                        padding:  EdgeInsets.fromLTRB(40, 0, 10, 0),
+                        child:  Text(
+                          "You can only share sample text sample text sample text",
+                          style: TextStyle(
+                              fontFamily: 'Nunito',
+                              fontSize: 14,
+                              color: Color.fromARGB(165, 0, 0, 0)),
+                        ),
+                      )
                     ],
                   ),
-                ),
-                  ],
                 ),
               ),
             ),
@@ -174,7 +189,7 @@ class _FifthPageState extends State<FifthPage> {
               height: 60,
               width: 370,
               child: Padding(
-                padding: const EdgeInsets.fromLTRB(20, 5, 20, 5),
+                padding: const EdgeInsets.fromLTRB(30, 5, 20, 5),
                 child: ElevatedButton(
                   onPressed: () {
                     Navigator.push(

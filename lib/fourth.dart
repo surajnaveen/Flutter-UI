@@ -102,7 +102,10 @@ class __FourthpagStateState extends State<Fourthpage> {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => const FifthPage()));
               },
-              child: const Text('Skip this step ->'),
+              child: const Text('Skip this step ->',style: TextStyle(
+                fontWeight: FontWeight.w900,
+                fontSize: 14
+              ),),
             ),
             Padding(
               padding: const EdgeInsets.fromLTRB(20, 5, 20, 5),
