@@ -75,7 +75,7 @@ class _ThirdPageState extends State<ThirdPage> {
               ),
             ),
             const Padding(
-              padding: EdgeInsets.fromLTRB(25, 10, 25, 20),
+              padding: EdgeInsets.fromLTRB(20, 7, 20, 17),
               child: Text(
                 "Enter 4 digit number that sent to your number",
                 style: TextStyle(
@@ -182,7 +182,7 @@ class _ThirdPageState extends State<ThirdPage> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(45.0),
+              padding: const EdgeInsets.all(35.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -211,11 +211,7 @@ class _ThirdPageState extends State<ThirdPage> {
                     ),
                     interval: const Duration(milliseconds: 1000),
                     onFinished: () {
-                      // ScaffoldMessenger.of(context).showSnackBar(
-                      //   const SnackBar(
-                      //     content: Text('Timer is done!'),
-                      //   ),
-                      // );
+                      
                     },
                   ),
                 ],

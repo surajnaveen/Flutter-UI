@@ -53,6 +53,8 @@ class _FifthPageState extends State<FifthPage> {
       ),
       body: SafeArea(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             SvgPicture.asset(
               "asset/Profile data-rafiki.svg",
@@ -60,7 +62,7 @@ class _FifthPageState extends State<FifthPage> {
               height: 250,
             ),
             const Padding(
-              padding: EdgeInsets.all(8.0),
+              padding: EdgeInsets.all(5.0),
               child: Text(
                 "One step away to your account",
                 style: TextStyle(
@@ -82,9 +84,7 @@ class _FifthPageState extends State<FifthPage> {
                 textAlign: TextAlign.center,
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(0, 0, 0, 20),
-              child: Container(
+             Container(
                 height: 100,
                 width: 335,
                 color: const Color.fromARGB(255, 255, 255, 255),
@@ -93,7 +93,7 @@ class _FifthPageState extends State<FifthPage> {
                   child: Column(
                     children: [
                       Row(
-                        //mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           ClipRRect(
                             borderRadius: BorderRadius.circular(45.0), //or 15.0
@@ -155,10 +155,8 @@ class _FifthPageState extends State<FifthPage> {
                   ),
                 ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(0, 0, 0, 20),
-              child: Container(
+            
+             Container(
                 height: 100,
                 width: 335,
                 color: const Color.fromARGB(255, 255, 255, 255),
@@ -167,10 +165,10 @@ class _FifthPageState extends State<FifthPage> {
                   child: Column(
                     children: [
                       Row(
-                        //mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        //mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           ClipRRect(
-                            borderRadius: BorderRadius.circular(45.0), //or 15.0
+                            borderRadius: BorderRadius.circular(45.0), 
                             child: Container(
                               height: 30.0,
                               width: 30.0,
@@ -209,7 +207,7 @@ class _FifthPageState extends State<FifthPage> {
                   ),
                 ),
               ),
-            ),
+            
             SizedBox(
               height: 60,
               width: 370,
@@ -255,6 +253,7 @@ class PopUpBox extends StatelessWidget {
       content: Container(
         height: MediaQuery.of(context).size.height * 0.5, 
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             SvgPicture.asset(
               "asset/undraw_done_re_oak4.svg",
