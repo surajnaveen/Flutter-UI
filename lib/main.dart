@@ -1,4 +1,4 @@
-import 'package:app_ui/second.dart';
+import 'package:app_ui/screens/Registration_page.dart';
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter_svg/flutter_svg.dart';

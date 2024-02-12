@@ -1,4 +1,4 @@
-import 'package:app_ui/third.dart';
+import 'package:app_ui/screens/Verify_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart';

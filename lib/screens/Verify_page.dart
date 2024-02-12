@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 // ignore: depend_on_referenced_packages
 import 'package:timer_count_down/timer_count_down.dart';
-import 'package:app_ui/fourth.dart';
+import 'package:app_ui/screens/Bio_security.dart';
 
 class ThirdPage extends StatefulWidget {
   const ThirdPage({super.key});
